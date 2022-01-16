@@ -6,7 +6,7 @@ using UseCases.DataStorePluginInterfaces;
 
 namespace Plugins.DataStore.InMemory
 {
-    public class CategoryInMemoryRepository : ICategoryRepository 
+    public class CategoryInMemoryRepository : ICategoryRepository  
     {
         private List<Category> categories;
          
@@ -16,7 +16,7 @@ namespace Plugins.DataStore.InMemory
             {
                 new Category {CategoryId = 1, Name = "Baverage", Description = "Baverage"},
                 new Category {CategoryId = 2, Name = "Bakery", Description = "Bakery"},
-                new Category {CategoryId = 3, Name = "Meat", Description = "Meat"},
+                new Category {CategoryId = 3, Name = "Meat", Description = "Meat"}, 
             };
         }
 
