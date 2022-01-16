@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ngMs8j1m86eoReCAWMUY4R3UlJLE9vg0FQOVAj44f6xpJ/oKfiH7vEZdAJ6GQBv49nckS3bstV4s14b2cSs3sQ==",
+  "dgSpecHash": "2woHlUs5qb2Mt1KPMgpTAXJSWTpGI8EfN1DlS7iOELhwPWTYlN9ypotKDOYcGKZCWkWMI27zOpz76oAvqiU0NA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Sefa\\source\\repos\\SupermarketManagement\\Plugins.DataStore.InMemory\\Plugins.DataStore.InMemory.csproj",
+  "projectFilePath": "C:\\Users\\Sefa\\Source\\Repos\\Blazor-SupermarketManagement\\Plugins.DataStore.InMemory\\Plugins.DataStore.InMemory.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

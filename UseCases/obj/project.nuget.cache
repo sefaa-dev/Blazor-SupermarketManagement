@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "cVe8igAfTUTCW4tc55ZcfkNXxQUlS+d1vFnu9Xcjtz48oHJnX+7gkOPXyDaM2KSQM15vwNPltxsxodsFNY2y6Q==",
+  "dgSpecHash": "mnwVNSLI2ToD0NhCHeedulAMqD7kvHzHPUhOpKSJS+hRd5LqVqvsf8D9NvS4ZFauY3r4tyNlXukTxGrXOdnNcA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Sefa\\source\\repos\\SupermarketManagement\\UseCases\\UseCases.csproj",
+  "projectFilePath": "C:\\Users\\Sefa\\Source\\Repos\\Blazor-SupermarketManagement\\UseCases\\UseCases.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

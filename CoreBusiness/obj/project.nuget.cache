@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "imZf6oeFRKiQ1As8dVcCGJLFfP8fgREmClkfLn2st6VIN6K2Ehh9PAoFaLjvwTDUum7LcWuPl/WHbJpwS05Krw==",
+  "dgSpecHash": "Oed2s4c0wXHWKL11isDvEPT2z2b9GWojJRwni58iOaiZLNi7bmTnG2XJpSRa5AeHh3x1zZH00bBx2iV84tNxPA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Sefa\\source\\repos\\SupermarketManagement\\CoreBusiness\\CoreBusiness.csproj",
+  "projectFilePath": "C:\\Users\\Sefa\\Source\\Repos\\Blazor-SupermarketManagement\\CoreBusiness\\CoreBusiness.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

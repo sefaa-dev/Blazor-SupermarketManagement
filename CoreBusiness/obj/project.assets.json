@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Sefa\\source\\repos\\SupermarketManagement\\CoreBusiness\\CoreBusiness.csproj",
+      "projectUniqueName": "C:\\Users\\Sefa\\Source\\Repos\\Blazor-SupermarketManagement\\CoreBusiness\\CoreBusiness.csproj",
       "projectName": "CoreBusiness",
-      "projectPath": "C:\\Users\\Sefa\\source\\repos\\SupermarketManagement\\CoreBusiness\\CoreBusiness.csproj",
+      "projectPath": "C:\\Users\\Sefa\\Source\\Repos\\Blazor-SupermarketManagement\\CoreBusiness\\CoreBusiness.csproj",
       "packagesPath": "C:\\Users\\Sefa\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Sefa\\source\\repos\\SupermarketManagement\\CoreBusiness\\obj\\",
+      "outputPath": "C:\\Users\\Sefa\\Source\\Repos\\Blazor-SupermarketManagement\\CoreBusiness\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Sefa\\AppData\\Roaming\\NuGet\\NuGet.Config",

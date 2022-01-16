@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vC0B7RqM5kU+k9O30nsT3V4Z8Qqam9nfSfcN+XibEfIyLZKXR/1AHU6CTXKepv3TLB/5XkMwviySJIoG80dDqw==",
+  "dgSpecHash": "CbaAL9zaYzkNfiwmjmHBacGxZwPCl76tVZxgBPm615/2C5BVl+DT3ZAeXMEtfjNxyL0ZUtb9lloF68qhBqb5nw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Sefa\\source\\repos\\SupermarketManagement\\WebApp\\WebApp.csproj",
+  "projectFilePath": "C:\\Users\\Sefa\\Source\\Repos\\Blazor-SupermarketManagement\\WebApp\\WebApp.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

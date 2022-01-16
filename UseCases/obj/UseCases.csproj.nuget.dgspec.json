@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Sefa\\source\\repos\\SupermarketManagement\\UseCases\\UseCases.csproj": {}
+    "C:\\Users\\Sefa\\Source\\Repos\\Blazor-SupermarketManagement\\UseCases\\UseCases.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Sefa\\source\\repos\\SupermarketManagement\\CoreBusiness\\CoreBusiness.csproj": {
+    "C:\\Users\\Sefa\\Source\\Repos\\Blazor-SupermarketManagement\\CoreBusiness\\CoreBusiness.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Sefa\\source\\repos\\SupermarketManagement\\CoreBusiness\\CoreBusiness.csproj",
+        "projectUniqueName": "C:\\Users\\Sefa\\Source\\Repos\\Blazor-SupermarketManagement\\CoreBusiness\\CoreBusiness.csproj",
         "projectName": "CoreBusiness",
-        "projectPath": "C:\\Users\\Sefa\\source\\repos\\SupermarketManagement\\CoreBusiness\\CoreBusiness.csproj",
+        "projectPath": "C:\\Users\\Sefa\\Source\\Repos\\Blazor-SupermarketManagement\\CoreBusiness\\CoreBusiness.csproj",
         "packagesPath": "C:\\Users\\Sefa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Sefa\\source\\repos\\SupermarketManagement\\CoreBusiness\\obj\\",
+        "outputPath": "C:\\Users\\Sefa\\Source\\Repos\\Blazor-SupermarketManagement\\CoreBusiness\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Sefa\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -58,14 +58,14 @@
         }
       }
     },
-    "C:\\Users\\Sefa\\source\\repos\\SupermarketManagement\\UseCases\\UseCases.csproj": {
+    "C:\\Users\\Sefa\\Source\\Repos\\Blazor-SupermarketManagement\\UseCases\\UseCases.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Sefa\\source\\repos\\SupermarketManagement\\UseCases\\UseCases.csproj",
+        "projectUniqueName": "C:\\Users\\Sefa\\Source\\Repos\\Blazor-SupermarketManagement\\UseCases\\UseCases.csproj",
         "projectName": "UseCases",
-        "projectPath": "C:\\Users\\Sefa\\source\\repos\\SupermarketManagement\\UseCases\\UseCases.csproj",
+        "projectPath": "C:\\Users\\Sefa\\Source\\Repos\\Blazor-SupermarketManagement\\UseCases\\UseCases.csproj",
         "packagesPath": "C:\\Users\\Sefa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Sefa\\source\\repos\\SupermarketManagement\\UseCases\\obj\\",
+        "outputPath": "C:\\Users\\Sefa\\Source\\Repos\\Blazor-SupermarketManagement\\UseCases\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Sefa\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -82,8 +82,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\Sefa\\source\\repos\\SupermarketManagement\\CoreBusiness\\CoreBusiness.csproj": {
-                "projectPath": "C:\\Users\\Sefa\\source\\repos\\SupermarketManagement\\CoreBusiness\\CoreBusiness.csproj"
+              "C:\\Users\\Sefa\\Source\\Repos\\Blazor-SupermarketManagement\\CoreBusiness\\CoreBusiness.csproj": {
+                "projectPath": "C:\\Users\\Sefa\\Source\\Repos\\Blazor-SupermarketManagement\\CoreBusiness\\CoreBusiness.csproj"
               }
             }
           }
