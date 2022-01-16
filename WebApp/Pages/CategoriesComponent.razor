@@ -44,7 +44,7 @@
     protected override void OnInitialized()
     {
         base.OnInitialized();
-        categories = ViewCategoryUseCase.Execute()?.ToList();
+        categories = ViewCategoryUseCase.Execute()?.ToList(); 
     }
 
     private void OnClickAddCategory()
