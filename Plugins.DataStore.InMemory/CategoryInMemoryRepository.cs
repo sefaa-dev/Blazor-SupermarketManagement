@@ -6,7 +6,7 @@ using UseCases.DataStorePluginInterfaces;
 
 namespace Plugins.DataStore.InMemory
 {
-    public class CategoryInMemoryRepository : ICategoryRepository  
+    public class CategoryInMemoryRepository : ICategoryRepository   
     {
         private List<Category> categories;
          
@@ -26,7 +26,7 @@ namespace Plugins.DataStore.InMemory
             var maxId = categories.Max(x => x.CategoryId);
             category.CategoryId = maxId + 1;
 
-            categories.Add(category);
+            categories.Add(category); 
         }
 
         public void UpdateCategory(Category category)
