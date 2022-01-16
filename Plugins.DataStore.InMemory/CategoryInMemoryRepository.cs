@@ -6,7 +6,7 @@ using UseCases.DataStorePluginInterfaces;
 
 namespace Plugins.DataStore.InMemory
 {
-    public class CategoryInMemoryRepository : ICategoryRepository
+    public class CategoryInMemoryRepository : ICategoryRepository 
     {
         private List<Category> categories;
          
