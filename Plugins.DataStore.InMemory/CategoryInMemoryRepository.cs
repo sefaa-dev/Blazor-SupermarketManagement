@@ -12,7 +12,7 @@ namespace Plugins.DataStore.InMemory
 
         public CategoryInMemoryRepository() 
         {
-            categories = new List<Category>()
+            categories = new List<Category>() 
             {
                 new Category {CategoryId = 1, Name = "Baverage", Description = "Baverage"},
                 new Category {CategoryId = 2, Name = "Bakery", Description = "Bakery"},

@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Plugins.DataStore.InMemory"
   ],
-  "SelectedNode": "\\SupermarketManagement.sln",
+  "SelectedNode": "\\Plugins.DataStore.InMemory\\CategoryInMemoryRepository.cs",
   "PreviewInSolutionExplorer": false
 }
