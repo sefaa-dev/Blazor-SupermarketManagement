@@ -2,7 +2,7 @@
 
 @inject NavigationManager NavigationManager
 @inject UseCases.IAddCategoryUseCase AddCategoryUseCase
-@inject UseCases.IGetCategoryByIdUseCase GetCategoryByIdUseCase
+@inject UseCases.IGetCategoryByIdUseCase GetCategoryByIdUseCase              
 @inject UseCases.IEditCategoryUseCase EditCategoryUseCase    
 
 
@@ -17,7 +17,7 @@
 
         <div class="form-group">
             <label for="name">Name</label>
-            <InputText id="name" @bind-Value="category.Name" class="form-control"></InputText>
+            <InputText id="name" @bind-Value="category.Name" class="form-control"></InputText> 
         </div>
 
         <div class="form-group">

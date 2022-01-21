@@ -98,7 +98,7 @@ using CoreBusiness;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 40 "C:\Users\Sefa\Source\Repos\Blazor-SupermarketManagement\WebApp\Pages\CategoriesComponent.razor"
+#line 45 "C:\Users\Sefa\Source\Repos\Blazor-SupermarketManagement\WebApp\Pages\CategoriesComponent.razor"
        
 
     private List<Category> categories;
@@ -106,7 +106,7 @@ using CoreBusiness;
     protected override void OnInitialized()
     {
         base.OnInitialized();
-        categories = ViewCategoryUseCase.Execute()?.ToList();
+        LoadCategories();
     }
 
     private void OnClickAddCategory()
@@ -120,9 +120,22 @@ using CoreBusiness;
         NavigationManager.NavigateTo($"/editcategory/{category.CategoryId}");
     }
 
+    private void DeleteCategory(int categoryId)
+    {
+        DeleteCategoryUseCase.Delete(categoryId);
+        LoadCategories();
+
+    }
+    private void LoadCategories()
+    {
+        categories = ViewCategoryUseCase.Execute()?.ToList();
+
+    }
+
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private UseCases.IDeleteCategoryUseCase DeleteCategoryUseCase { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private UseCases.IViewCategoriesUseCase ViewCategoryUseCase { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager NavigationManager { get; set; }
     }
