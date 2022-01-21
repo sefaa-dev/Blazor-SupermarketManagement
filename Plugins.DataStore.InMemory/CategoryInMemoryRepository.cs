@@ -30,11 +30,11 @@ namespace Plugins.DataStore.InMemory
             }
             else
             {
-                category.CategoryId = 1;
+                category.CategoryId = 1; 
             }
 
 
-            categories.Add(category);
+            categories.Add(category); 
         }
 
         public void UpdateCategory(Category category) 
