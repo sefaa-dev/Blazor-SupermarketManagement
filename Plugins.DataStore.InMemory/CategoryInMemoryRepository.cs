@@ -37,7 +37,7 @@ namespace Plugins.DataStore.InMemory
             categories.Add(category);
         }
 
-        public void UpdateCategory(Category category)
+        public void UpdateCategory(Category category) 
         { 
             var categoryToUpdate = GetCategoryById(category.CategoryId);   
             if (categoryToUpdate != null)
