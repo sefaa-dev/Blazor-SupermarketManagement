@@ -1,8 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Plugins.DataStore.InMemory"
+    "\\Plugins.DataStore.InMemory",
+    "\\WebApp",
+    "\\WebApp\\Pages"
   ],
-  "SelectedNode": "\\Plugins.DataStore.InMemory\\CategoryInMemoryRepository.cs",
+  "SelectedNode": "\\WebApp\\Pages\\CategoriesComponent.razor",
   "PreviewInSolutionExplorer": false
 }
