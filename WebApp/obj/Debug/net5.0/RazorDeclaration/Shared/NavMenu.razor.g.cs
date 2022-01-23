@@ -97,7 +97,7 @@ using CoreBusiness;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 33 "C:\Users\Sefa\Source\Repos\Blazor-SupermarketManagement\WebApp\Shared\NavMenu.razor"
+#line 38 "C:\Users\Sefa\Source\Repos\Blazor-SupermarketManagement\WebApp\Shared\NavMenu.razor"
        
     private bool collapseNavMenu = true;
 
