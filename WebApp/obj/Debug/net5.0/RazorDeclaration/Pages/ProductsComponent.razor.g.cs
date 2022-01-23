@@ -89,6 +89,7 @@ using CoreBusiness;
 #line default
 #line hidden
 #nullable disable
+    [Microsoft.AspNetCore.Components.RouteAttribute("/products")]
     public partial class ProductsComponent : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -97,9 +98,11 @@ using CoreBusiness;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 33 "C:\Users\Sefa\Source\Repos\Blazor-SupermarketManagement\WebApp\Pages\ProductsComponent.razor"
+#line 35 "C:\Users\Sefa\Source\Repos\Blazor-SupermarketManagement\WebApp\Pages\ProductsComponent.razor"
        
+
     private IEnumerable<Product> products;
+
 
     protected override void OnInitialized()
     {
@@ -112,8 +115,8 @@ using CoreBusiness;
 #line default
 #line hidden
 #nullable disable
-        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IGetCategoryByIdUseCase GetCategoryByIdUseCase { get; set; }
-        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IViewProductsUseCase ViewProductsUseCase { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private UseCases.IGetCategoryByIdUseCase GetCategoryByIdUseCase { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private UseCases.IViewProductsUseCase ViewProductsUseCase { get; set; }
     }
 }
 #pragma warning restore 1591
