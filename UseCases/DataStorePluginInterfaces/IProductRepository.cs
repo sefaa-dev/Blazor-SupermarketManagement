@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace UseCases.DataStorePluginInterfaces
 {
-    public interface IProductRepository(Product product)
+    public interface IProductRepository
     {
         IEnumerable<Product> GetProducts();
-        void AddProduct();
+        void AddProduct(Product product);
     }
 }
