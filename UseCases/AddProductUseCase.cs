@@ -8,7 +8,7 @@ using UseCases.DataStorePluginInterfaces;
 
 namespace UseCases
 {
-    public class AddProductUseCase
+    public class AddProductUseCase : IAddProductUseCase
     {
         private readonly IProductRepository productRepository;
 
@@ -18,7 +18,7 @@ namespace UseCases
         }
         public void Execute(Product product)
         {
-
+            productRepository.AddProduct(product);
         }
     }
 }
