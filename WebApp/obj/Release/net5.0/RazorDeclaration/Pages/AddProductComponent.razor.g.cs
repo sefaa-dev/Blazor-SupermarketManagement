@@ -89,34 +89,13 @@ using CoreBusiness;
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/products")]
-    public partial class ProductsComponent : Microsoft.AspNetCore.Components.ComponentBase
+    public partial class AddProductComponent : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
         {
         }
         #pragma warning restore 1998
-#nullable restore
-#line 35 "C:\Users\Sefa\source\repos\Blazor-SupermarketManagement\WebApp\Pages\ProductsComponent.razor"
-       
-
-    private IEnumerable<Product> products;
-
-
-    protected override void OnInitialized()
-    {
-        base.OnInitialized();
-
-        products = ViewProductsUseCase.Execute();
-
-    }
-
-#line default
-#line hidden
-#nullable disable
-        [global::Microsoft.AspNetCore.Components.InjectAttribute] private UseCases.IGetCategoryByIdUseCase GetCategoryByIdUseCase { get; set; }
-        [global::Microsoft.AspNetCore.Components.InjectAttribute] private UseCases.IViewProductsUseCase ViewProductsUseCase { get; set; }
     }
 }
 #pragma warning restore 1591
