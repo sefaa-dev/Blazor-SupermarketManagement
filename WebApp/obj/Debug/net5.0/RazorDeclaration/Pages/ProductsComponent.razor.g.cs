@@ -98,7 +98,7 @@ using CoreBusiness;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 35 "C:\Users\Sefa\Source\Repos\Blazor-SupermarketManagement\WebApp\Pages\ProductsComponent.razor"
+#line 38 "C:\Users\Sefa\Source\Repos\Blazor-SupermarketManagement\WebApp\Pages\ProductsComponent.razor"
        
 
     private IEnumerable<Product> products;
@@ -111,12 +111,17 @@ using CoreBusiness;
         products = ViewProductsUseCase.Execute();
 
     }
+    private void OnClickAddProduct()
+    {
+        NavigationManager.NavigateTo("/addproduct");
+    }
 
 #line default
 #line hidden
 #nullable disable
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private UseCases.IGetCategoryByIdUseCase GetCategoryByIdUseCase { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private UseCases.IViewProductsUseCase ViewProductsUseCase { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager NavigationManager { get; set; }
     }
 }
 #pragma warning restore 1591
