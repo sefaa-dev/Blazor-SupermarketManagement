@@ -33,7 +33,7 @@
 
 }
 <br />
-<button type="button" @onclick="OnClickAddProduct" class="btn btn-primary">Add Category</button>
+<button type="button" @onclick="OnClickAddProduct" class="btn btn-primary">Add Product</button>
 
 @code {
 
@@ -49,6 +49,6 @@
     }
     private void OnClickAddProduct()
     {
-        NavigationManager.NavigateTo("addcategory");
+        NavigationManager.NavigateTo("/addproduct");
     }
 }
