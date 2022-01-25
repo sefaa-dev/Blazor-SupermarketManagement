@@ -3,8 +3,9 @@
     "",
     "\\Plugins.DataStore.InMemory",
     "\\WebApp",
-    "\\WebApp\\Pages"
+    "\\WebApp\\Pages",
+    "\\WebApp\\Shared"
   ],
-  "SelectedNode": "\\WebApp\\Pages\\ProductsComponent.razor",
+  "SelectedNode": "\\WebApp\\Shared\\NavMenu.razor",
   "PreviewInSolutionExplorer": false
 }
