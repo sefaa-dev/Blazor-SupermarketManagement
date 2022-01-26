@@ -1,5 +1,77 @@
-﻿<h3>Edit Product</h3>
+﻿@page "/editproduct/{productId}"
+
+@inject NavigationManager NavigationManager
+@inject UseCases.IAddProductUseCase AddProductUseCase
+@inject UseCases.IGetProductByIdUseCase GetProductByIdUseCase
+@inject UseCases.IEditProductUseCase EditProductUseCase
+
+
+<h3>Edit Product</h3>
+<br />
+
+@if (product != null)
+{
+    <EditForm Model="product" OnValidSubmit="OnValidSumit">
+        <DataAnnotationsValidator></DataAnnotationsValidator>
+        <ValidationSummary></ValidationSummary>
+
+        <div class="form-group">
+            <label for="name">Name</label>
+            <InputText id="name" @bind-Value="product.Name" class="form-control"></InputText>
+        </div>
+
+        <div class="form-group">
+            <label for="description">Description</label>
+            <InputText id="description" @bind-Value="product.Description" class="form-control"></InputText>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Save</button>
+        <button type="button" class="btn btn-primary" @onclick="OnCancel">Cancel</button>
+
+
+    </EditForm>
+
+}
+
+
 
 @code {
 
+    [Parameter]
+    public string ProductId { get; set; }
+
+    private product product;
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+
+    }
+    protected override void OnParametersSet()
+    {
+        base.OnParametersSet();
+
+        if (int.TryParse(this.ProductId, out int iProductId))
+        {
+            var cat = GetProductByIdUseCase.Execute(iProductId);
+            this.product = new product { ProductId = cat.ProductId, Name = cat.Name, Description = cat.Description };
+
+
+
+        }
+
+    }
+
+
+    private void OnValidSumit()
+    {
+        EditProductUseCase.Execute(this.product);
+        NavigationManager.NavigateTo("/categories");
+
+    }
+
+    private void OnCancel()
+    {
+        NavigationManager.NavigateTo("/categories");
+    }
 }
