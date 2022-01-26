@@ -95,12 +95,12 @@
     private void OnValidSumit()
     {
         EditProductUseCase.Execute(this.product);
-        NavigationManager.NavigateTo("/categories");
+        NavigationManager.NavigateTo("/products");
 
     }
 
     private void OnCancel()
     {
-        NavigationManager.NavigateTo("/categories");
+        NavigationManager.NavigateTo("/products");
     }
 }
