@@ -37,14 +37,14 @@
 
 @code {
 
-    private IEnumerable<Product> products;  
+    private IEnumerable<Product> products;     
 
 
     protected override void OnInitialized()
     {
         base.OnInitialized();
 
-        products = ViewProductsUseCase.Execute();
+        products = ViewProductsUseCase.Execute(); 
 
     }
     private void OnClickAddProduct()

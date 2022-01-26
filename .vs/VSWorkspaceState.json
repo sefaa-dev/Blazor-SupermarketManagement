@@ -6,6 +6,6 @@
     "\\WebApp\\Pages",
     "\\WebApp\\Shared"
   ],
-  "SelectedNode": "\\WebApp\\Shared\\NavMenu.razor",
+  "SelectedNode": "\\WebApp\\Pages\\AddProductComponent.razor",
   "PreviewInSolutionExplorer": false
 }
