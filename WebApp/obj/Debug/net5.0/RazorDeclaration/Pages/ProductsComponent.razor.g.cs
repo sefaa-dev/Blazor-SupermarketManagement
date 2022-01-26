@@ -98,22 +98,27 @@ using CoreBusiness;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 38 "C:\Users\Sefa\Source\Repos\Blazor-SupermarketManagement\WebApp\Pages\ProductsComponent.razor"
+#line 40 "C:\Users\Sefa\Source\Repos\Blazor-SupermarketManagement\WebApp\Pages\ProductsComponent.razor"
        
 
-    private IEnumerable<Product> products;     
+    private IEnumerable<Product> products;
 
 
     protected override void OnInitialized()
     {
         base.OnInitialized();
 
-        products = ViewProductsUseCase.Execute(); 
+        products = ViewProductsUseCase.Execute();
 
     }
     private void OnClickAddProduct()
     {
         NavigationManager.NavigateTo("/addproduct");
+    }
+
+    private void OnEditProduct(Product product)
+    {
+        NavigationManager.NavigateTo($"/editproduct/{product.ProductId}");
     }
 
 #line default

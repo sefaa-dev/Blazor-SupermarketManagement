@@ -142,3 +142,5 @@ C:\Users\Sefa\Source\Repos\Blazor-SupermarketManagement\WebApp\obj\Debug\net5.0\
 C:\Users\Sefa\Source\Repos\Blazor-SupermarketManagement\WebApp\obj\Debug\net5.0\WebApp.genruntimeconfig.cache
 C:\Users\Sefa\Source\Repos\Blazor-SupermarketManagement\WebApp\obj\Debug\net5.0\RazorDeclaration\Pages\AddProductComponent.razor.g.cs
 C:\Users\Sefa\Source\Repos\Blazor-SupermarketManagement\WebApp\obj\Debug\net5.0\Razor\Pages\AddProductComponent.razor.g.cs
+C:\Users\Sefa\Source\Repos\Blazor-SupermarketManagement\WebApp\obj\Debug\net5.0\RazorDeclaration\Pages\EditProductComponent.razor.g.cs
+C:\Users\Sefa\Source\Repos\Blazor-SupermarketManagement\WebApp\obj\Debug\net5.0\Razor\Pages\EditProductComponent.razor.g.cs
