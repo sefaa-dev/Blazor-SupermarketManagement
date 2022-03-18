@@ -83,7 +83,14 @@ using WebApp.Shared;
 #line hidden
 #nullable disable
 #nullable restore
-#line 12 "C:\Users\Sefa\source\repos\Blazor-SupermarketManagement\WebApp\_Imports.razor"
+#line 11 "C:\Users\Sefa\source\repos\Blazor-SupermarketManagement\WebApp\_Imports.razor"
+using WebApp.Controls;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 13 "C:\Users\Sefa\source\repos\Blazor-SupermarketManagement\WebApp\_Imports.razor"
 using CoreBusiness;
 
 #line default
@@ -98,17 +105,17 @@ using CoreBusiness;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 38 "C:\Users\Sefa\source\repos\Blazor-SupermarketManagement\WebApp\Pages\ProductsComponent.razor"
+#line 46 "C:\Users\Sefa\source\repos\Blazor-SupermarketManagement\WebApp\Pages\ProductsComponent.razor"
        
 
-    private IEnumerable<Product> products;     
+    private IEnumerable<Product> products;
 
 
     protected override void OnInitialized()
     {
         base.OnInitialized();
 
-        products = ViewProductsUseCase.Execute(); 
+        products = ViewProductsUseCase.Execute();
 
     }
     private void OnClickAddProduct()
@@ -116,9 +123,20 @@ using CoreBusiness;
         NavigationManager.NavigateTo("/addproduct");
     }
 
+    private void OnEditProduct(Product product)
+    {
+        NavigationManager.NavigateTo($"/editproduct/{product.ProductId}");
+    }
+
+    private void OnDeleteProduct(int productId)
+    {
+        DeleteProductUseCase.Execute(productId);
+    }
+
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private UseCases.IDeleteProductUseCase DeleteProductUseCase { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private UseCases.IGetCategoryByIdUseCase GetCategoryByIdUseCase { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private UseCases.IViewProductsUseCase ViewProductsUseCase { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager NavigationManager { get; set; }

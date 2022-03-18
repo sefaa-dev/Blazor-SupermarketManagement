@@ -4,7 +4,7 @@
 #pragma warning disable 0649
 #pragma warning disable 0169
 
-namespace WebApp.Pages
+namespace WebApp.Controls
 {
     #line hidden
     using System;
@@ -83,33 +83,26 @@ using WebApp.Shared;
 #line hidden
 #nullable disable
 #nullable restore
-#line 12 "C:\Users\Sefa\Source\Repos\Blazor-SupermarketManagement\WebApp\_Imports.razor"
+#line 11 "C:\Users\Sefa\Source\Repos\Blazor-SupermarketManagement\WebApp\_Imports.razor"
+using WebApp.Controls;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 13 "C:\Users\Sefa\Source\Repos\Blazor-SupermarketManagement\WebApp\_Imports.razor"
 using CoreBusiness;
 
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/counter")]
-    public partial class Counter : Microsoft.AspNetCore.Components.ComponentBase
+    public partial class SellProductComponent : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
         {
         }
         #pragma warning restore 1998
-#nullable restore
-#line 9 "C:\Users\Sefa\Source\Repos\Blazor-SupermarketManagement\WebApp\Pages\Counter.razor"
-       
-    private int currentCount = 0;
-
-    private void IncrementCount()
-    {
-        currentCount++;
-    }
-
-#line default
-#line hidden
-#nullable disable
     }
 }
 #pragma warning restore 1591

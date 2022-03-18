@@ -83,7 +83,14 @@ using WebApp.Shared;
 #line hidden
 #nullable disable
 #nullable restore
-#line 12 "C:\Users\Sefa\Source\Repos\Blazor-SupermarketManagement\WebApp\_Imports.razor"
+#line 11 "C:\Users\Sefa\Source\Repos\Blazor-SupermarketManagement\WebApp\_Imports.razor"
+using WebApp.Controls;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 13 "C:\Users\Sefa\Source\Repos\Blazor-SupermarketManagement\WebApp\_Imports.razor"
 using CoreBusiness;
 
 #line default
@@ -97,7 +104,7 @@ using CoreBusiness;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 38 "C:\Users\Sefa\Source\Repos\Blazor-SupermarketManagement\WebApp\Shared\NavMenu.razor"
+#line 34 "C:\Users\Sefa\Source\Repos\Blazor-SupermarketManagement\WebApp\Shared\NavMenu.razor"
        
     private bool collapseNavMenu = true;
 

@@ -4,7 +4,7 @@
 #pragma warning disable 0649
 #pragma warning disable 0169
 
-namespace WebApp.Pages
+namespace WebApp.Controls
 {
     #line hidden
     using System;
@@ -83,21 +83,20 @@ using WebApp.Shared;
 #line hidden
 #nullable disable
 #nullable restore
-#line 12 "C:\Users\Sefa\Source\Repos\Blazor-SupermarketManagement\WebApp\_Imports.razor"
-using CoreBusiness;
+#line 11 "C:\Users\Sefa\Source\Repos\Blazor-SupermarketManagement\WebApp\_Imports.razor"
+using WebApp.Controls;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "C:\Users\Sefa\Source\Repos\Blazor-SupermarketManagement\WebApp\Pages\FetchData.razor"
-using WebApp.Data;
+#line 13 "C:\Users\Sefa\Source\Repos\Blazor-SupermarketManagement\WebApp\_Imports.razor"
+using CoreBusiness;
 
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/fetchdata")]
-    public partial class FetchData : Microsoft.AspNetCore.Components.ComponentBase
+    public partial class SelectProductForSellingComponent : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -105,19 +104,48 @@ using WebApp.Data;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 39 "C:\Users\Sefa\Source\Repos\Blazor-SupermarketManagement\WebApp\Pages\FetchData.razor"
+#line 44 "C:\Users\Sefa\Source\Repos\Blazor-SupermarketManagement\WebApp\Controls\SelectProductForSellingComponent.razor"
        
-    private WeatherForecast[] forecasts;
 
-    protected override async Task OnInitializedAsync()
+    private IEnumerable<Product> productsInCategory;
+
+    [Parameter]
+    public EventCallback<Product>  OnProductSelected { get; set; }
+
+    private int selectedCategoryId;
+    private int SelectedCategoryId
     {
-        forecasts = await ForecastService.GetForecastAsync(DateTime.Now);
+        get
+        {
+            return selectedCategoryId;
+        }
+        set
+        {
+            selectedCategoryId = value;
+            productsInCategory = ViewProductsByCategoryId.Execute(value);
+            StateHasChanged();
+        }
     }
+
+    private IEnumerable<Category> categories;
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+
+        categories = ViewCategoriesUseCase.Execute();
+    }
+
+    private void OnSelectProduct(Product product)
+    {
+        OnProductSelected.InvokeAsync(product);
+        }
 
 #line default
 #line hidden
 #nullable disable
-        [global::Microsoft.AspNetCore.Components.InjectAttribute] private WeatherForecastService ForecastService { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private UseCases.IViewProductsByCategoryId ViewProductsByCategoryId { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private UseCases.IViewCategoriesUseCase ViewCategoriesUseCase { get; set; }
     }
 }
 #pragma warning restore 1591

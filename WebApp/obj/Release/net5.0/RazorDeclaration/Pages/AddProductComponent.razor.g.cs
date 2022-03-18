@@ -83,7 +83,14 @@ using WebApp.Shared;
 #line hidden
 #nullable disable
 #nullable restore
-#line 12 "C:\Users\Sefa\source\repos\Blazor-SupermarketManagement\WebApp\_Imports.razor"
+#line 11 "C:\Users\Sefa\source\repos\Blazor-SupermarketManagement\WebApp\_Imports.razor"
+using WebApp.Controls;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 13 "C:\Users\Sefa\source\repos\Blazor-SupermarketManagement\WebApp\_Imports.razor"
 using CoreBusiness;
 
 #line default
@@ -98,7 +105,7 @@ using CoreBusiness;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 53 "C:\Users\Sefa\source\repos\Blazor-SupermarketManagement\WebApp\Pages\AddProductComponent.razor"
+#line 50 "C:\Users\Sefa\source\repos\Blazor-SupermarketManagement\WebApp\Pages\AddProductComponent.razor"
        
 
     private Product product;
