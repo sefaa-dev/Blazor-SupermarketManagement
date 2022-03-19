@@ -1,14 +1,55 @@
-﻿@if (SelectedProduct != null)
+﻿@inject UseCases.IGetProductByIdUseCase GetProductByIdUseCase
+
+@if (SelectedProduct != null)
 {
+
+<EditForm Model="productToSell" OnInvalidSubmit="SellProduct">
+    <DataAnnotationsValidator></DataAnnotationsValidator>
+    <ValidationSummary></ValidationSummary>
+
     <div class="form-group">
         <label for="name">Product Name</label>
-        <input type="text" readonly value="@SelectedProduct.Name" />
+        <input id="name" type="text" readonly value="@productToSell.Name" />
     </div>
+    <div class="form-group">
+        <label for="price">Price</label>
+        <input id="price" type="text" readonly value="@(string.Format("{0:c}", productToSell.Price))" />
+    </div>
+    <div class="form-group">
+        <label for="qty">Quantity</label>
+        <InputNumber id="qty" @bind-Value="@productToSell.Quantity" class="form-control"></InputNumber>
+    </div>
+
+</EditForm>
+    
 }
 
 
 @code {
+    private Product productToSell;
 
     [Parameter]
     public Product SelectedProduct { get; set; }
+
+    [Parameter]
+    public EventCallback<Product> OnProductSold { get; set; }
+
+    protected override void OnParametersSet()
+    {
+        base.OnParametersSet();
+
+        productToSell = new Product
+        {
+            ProductId = SelectedProduct.ProductId,
+            Name = SelectedProduct.Name,
+            CategoryId = SelectedProduct.CategoryId,
+            Price = SelectedProduct.Price,
+            Quantity = 0
+        };
+    }
+
+    private void SellProduct()
+    {
+        OnProductSold.InvokeAsync(productToSell);
+    }
 }

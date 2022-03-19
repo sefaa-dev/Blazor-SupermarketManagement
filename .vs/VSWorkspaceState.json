@@ -3,9 +3,10 @@
     "",
     "\\Plugins.DataStore.InMemory",
     "\\WebApp",
+    "\\WebApp\\Controls",
     "\\WebApp\\Pages",
     "\\WebApp\\Shared"
   ],
-  "SelectedNode": "\\WebApp\\Startup.cs",
+  "SelectedNode": "\\WebApp\\Controls\\SelectProductForSellingComponent.razor",
   "PreviewInSolutionExplorer": false
 }
