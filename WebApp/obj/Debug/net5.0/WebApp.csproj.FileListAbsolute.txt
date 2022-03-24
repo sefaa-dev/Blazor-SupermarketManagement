@@ -144,3 +144,5 @@ C:\Users\Sefa\Source\Repos\Blazor-SupermarketManagement\WebApp\obj\Debug\net5.0\
 C:\Users\Sefa\Source\Repos\Blazor-SupermarketManagement\WebApp\obj\Debug\net5.0\RazorDeclaration\Pages\CashierConsoleComponent.razor.g.cs
 C:\Users\Sefa\Source\Repos\Blazor-SupermarketManagement\WebApp\obj\Debug\net5.0\Razor\Controls\SelectProductForSellingComponent.razor.g.cs
 C:\Users\Sefa\Source\Repos\Blazor-SupermarketManagement\WebApp\obj\Debug\net5.0\Razor\Pages\CashierConsoleComponent.razor.g.cs
+C:\Users\Sefa\Source\Repos\Blazor-SupermarketManagement\WebApp\obj\Debug\net5.0\RazorDeclaration\Controls\SellProductComponent.razor.g.cs
+C:\Users\Sefa\Source\Repos\Blazor-SupermarketManagement\WebApp\obj\Debug\net5.0\Razor\Controls\SellProductComponent.razor.g.cs

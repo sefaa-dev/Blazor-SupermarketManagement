@@ -103,6 +103,56 @@ using CoreBusiness;
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 29 "C:\Users\Sefa\Source\Repos\Blazor-SupermarketManagement\WebApp\Controls\SellProductComponent.razor"
+       
+    private Product productToSell;
+    private string errorMessage;
+
+    [Parameter]
+    public Product SelectedProduct { get; set; }
+
+    [Parameter]
+    public EventCallback<Product> OnProductSold { get; set; }
+
+    protected override void OnParametersSet()
+    {
+        base.OnParametersSet();
+
+        if (SelectedProduct != null)
+        {
+            productToSell = new Product
+            {
+                ProductId = SelectedProduct.ProductId,
+                Name = SelectedProduct.Name,
+                CategoryId = SelectedProduct.CategoryId,
+                Price = SelectedProduct.Price,
+                Quantity = 0
+            };
+        }
+
+
+    }
+
+    private void SellProduct()
+    {
+        var product = GetProductByIdUseCase.Execute(productToSell.ProductId);
+        if (product.Quantity >= productToSell.Quantity)
+        {
+            OnProductSold.InvokeAsync(productToSell);
+            errorMessage = string.Empty;
+
+        }
+        else
+        {
+            errorMessage = $"{product.Name} only has {product.Quantity} left. It is not enough.";
+        }
+    }
+
+#line default
+#line hidden
+#nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private UseCases.IGetProductByIdUseCase GetProductByIdUseCase { get; set; }
     }
 }
 #pragma warning restore 1591
