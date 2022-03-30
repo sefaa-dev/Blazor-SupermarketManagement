@@ -105,7 +105,7 @@ using CoreBusiness;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 16 "C:\Users\Sefa\Source\Repos\Blazor-SupermarketManagement\WebApp\Pages\CashierConsoleComponent.razor"
+#line 17 "C:\Users\Sefa\Source\Repos\Blazor-SupermarketManagement\WebApp\Pages\CashierConsoleComponent.razor"
        
 
     private Product selectedProduct;

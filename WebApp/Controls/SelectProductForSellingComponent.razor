@@ -61,6 +61,7 @@
         {
             selectedCategoryId = value;
             productsInCategory = ViewProductsByCategoryId.Execute(value);
+            OnSelectProduct(null);
             StateHasChanged();
         }
     }
@@ -70,13 +71,13 @@
     protected override void OnInitialized()
     {
         base.OnInitialized();
-
         categories = ViewCategoriesUseCase.Execute();
     }
 
     private void OnSelectProduct(Product product)
     {
-        selectedProductId = product.ProductId;
         OnProductSelected.InvokeAsync(product);
-        }
+
+        if(product != null) selectedProductId = product.ProductId;
+    }
 }

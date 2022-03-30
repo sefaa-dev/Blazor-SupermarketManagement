@@ -104,7 +104,7 @@ using CoreBusiness;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 29 "C:\Users\Sefa\Source\Repos\Blazor-SupermarketManagement\WebApp\Controls\SellProductComponent.razor"
+#line 32 "C:\Users\Sefa\Source\Repos\Blazor-SupermarketManagement\WebApp\Controls\SellProductComponent.razor"
        
     private Product productToSell;
     private string errorMessage;
@@ -130,19 +130,27 @@ using CoreBusiness;
                 Quantity = 0
             };
         }
-
-
+        else
+        {
+            productToSell = null;
+        }
     }
 
     private void SellProduct()
     {
         var product = GetProductByIdUseCase.Execute(productToSell.ProductId);
-        if (product.Quantity >= productToSell.Quantity)
+        if (productToSell.Quantity <= 0)
+        {
+            errorMessage = "The quantity has to be greater than zero.";
+        }
+        else if (product.Quantity >= productToSell.Quantity)
         {
             OnProductSold.InvokeAsync(productToSell);
             errorMessage = string.Empty;
+            SellProductUseCase.Execute(productToSell.ProductId, productToSell.Quantity.Value);
 
         }
+
         else
         {
             errorMessage = $"{product.Name} only has {product.Quantity} left. It is not enough.";
@@ -152,6 +160,7 @@ using CoreBusiness;
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private UseCases.ISellProductUseCase SellProductUseCase { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private UseCases.IGetProductByIdUseCase GetProductByIdUseCase { get; set; }
     }
 }

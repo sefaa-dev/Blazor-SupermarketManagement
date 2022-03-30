@@ -1,4 +1,5 @@
 ﻿@inject UseCases.IGetProductByIdUseCase GetProductByIdUseCase
+@inject UseCases.ISellProductUseCase SellProductUseCase
 
 @if (productToSell != null)
 {
@@ -26,10 +27,7 @@
         <button type="submit" class="btn btn-primary">Sell</button>
     </EditForm>
 
-
-
 }
-
 
 @code {
     private Product productToSell;
@@ -56,8 +54,10 @@
                 Quantity = 0
             };
         }
-
-
+        else
+        {
+            productToSell = null;
+        }
     }
 
     private void SellProduct()
@@ -71,6 +71,7 @@
         {
             OnProductSold.InvokeAsync(productToSell);
             errorMessage = string.Empty;
+            SellProductUseCase.Execute(productToSell.ProductId, productToSell.Quantity.Value);
 
         }
 
