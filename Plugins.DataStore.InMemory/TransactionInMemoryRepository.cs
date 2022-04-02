@@ -16,18 +16,35 @@ namespace Plugins.DataStore.InMemory
         {
             transactions = new List<Transaction>();
         }
-        public IEnumerable<Transaction> GetByDay(DateTime date)
+
+        public IEnumerable<Transaction> Get(string cashierName)
         {
-            throw new NotImplementedException();
+            if (string.IsNullOrWhiteSpace(cashierName))
+                return transactions;
+            else
+
+                return transactions.Where(x => string.Equals(x.CashierName, cashierName, StringComparison.OrdinalIgnoreCase));
         }
 
-        public void Save(string cashierName, int productId, double price, int qty)
+        public IEnumerable<Transaction> GetByDay(string cashierName, DateTime date)
+        {
+            if (string.IsNullOrWhiteSpace(cashierName))
+                return transactions.Where(x => x.TimeStamp.Date == date.Date);
+
+            else
+
+                return transactions.Where(x =>
+                string.Equals(x.CashierName, cashierName, StringComparison.OrdinalIgnoreCase) &&
+                x.TimeStamp.Date == date.Date);
+        }
+
+        public void Save(string cashierName, int productId, string productName, double price, int beforeQty, int soldQty)
         {
             int transactionId = 0;
             if (transactionId != null && transactions.Count > 0)
             {
                 int maxId = transactions.Max(x => x.TransactionId);
-                transactionsId = maxId + 1;
+                transactionId = maxId + 1;
             }
             else
             {
@@ -35,11 +52,27 @@ namespace Plugins.DataStore.InMemory
             }
             transactions.Add(new Transaction
             {
+                TransactionId = transactionId,
                 ProductId = productId,
+                ProductName = productName,
                 TimeStamp = DateTime.Now,
                 Price = price,
-                Qty = qty,
+                BeforeQty = beforeQty,
+                SoldQty = soldQty,
+                CashierName = cashierName
             });
+        }
+
+        IEnumerable<System.Transactions.Transaction> ITransactionRepository.Get(string cashierName)
+        {
+            throw new NotImplementedException();
+        }
+
+    
+
+        IEnumerable<System.Transactions.Transaction> ITransactionRepository.GetByDay(string cashierName, DateTime date)
+        {
+            throw new NotImplementedException();
         }
     }
 }

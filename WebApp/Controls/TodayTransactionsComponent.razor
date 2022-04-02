@@ -1,0 +1,40 @@
+﻿@inject UseCases.IGetTodayTransactionsUseCase GetTodayTransactionsUseCase
+@if (transactions != null)
+{
+<table class="table">
+    <thead>
+        <tr>
+            <th>Cashier Name</th>
+            <th>Product Name</th>
+            <th>Date Time</th>
+            <th>Qty Before</th>
+            <th>Qty Sold</th>
+            <th>Qty After</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var tran in transactions)
+        {
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        }
+    </tbody>
+</table>
+}
+
+
+@code {
+    private IEnumerable<Transaction> transactions;
+
+    public void LoadTransactions()
+        {
+        transactions = GetTodayTransactionsUseCase.Execute(cashierName);
+        StateHasChanged();
+        }
+
+}

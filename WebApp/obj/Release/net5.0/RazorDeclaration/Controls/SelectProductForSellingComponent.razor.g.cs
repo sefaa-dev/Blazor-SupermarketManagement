@@ -104,10 +104,11 @@ using CoreBusiness;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 44 "C:\Users\Sefa\source\repos\Blazor-SupermarketManagement\WebApp\Controls\SelectProductForSellingComponent.razor"
+#line 45 "C:\Users\Sefa\source\repos\Blazor-SupermarketManagement\WebApp\Controls\SelectProductForSellingComponent.razor"
        
 
     private IEnumerable<Product> productsInCategory;
+    private int selectedProductId;
 
     [Parameter]
     public EventCallback<Product>  OnProductSelected { get; set; }
@@ -123,6 +124,7 @@ using CoreBusiness;
         {
             selectedCategoryId = value;
             productsInCategory = ViewProductsByCategoryId.Execute(value);
+            OnSelectProduct(null);
             StateHasChanged();
         }
     }
@@ -132,14 +134,15 @@ using CoreBusiness;
     protected override void OnInitialized()
     {
         base.OnInitialized();
-
         categories = ViewCategoriesUseCase.Execute();
     }
 
     private void OnSelectProduct(Product product)
     {
         OnProductSelected.InvokeAsync(product);
-        }
+
+        if(product != null) selectedProductId = product.ProductId;
+    }
 
 #line default
 #line hidden

@@ -110,6 +110,9 @@ using CoreBusiness;
     private string errorMessage;
 
     [Parameter]
+    public string CashierName { get; set; }
+
+    [Parameter]
     public Product SelectedProduct { get; set; }
 
     [Parameter]
@@ -138,6 +141,12 @@ using CoreBusiness;
 
     private void SellProduct()
     {
+        if (string.IsNullOrWhiteSpace(CashierName))
+        {
+            errorMessage = "The Cashier's name is missing.";
+            return;
+        }
+
         var product = GetProductByIdUseCase.Execute(productToSell.ProductId);
         if (productToSell.Quantity <= 0)
         {
@@ -145,9 +154,10 @@ using CoreBusiness;
         }
         else if (product.Quantity >= productToSell.Quantity)
         {
+
             OnProductSold.InvokeAsync(productToSell);
             errorMessage = string.Empty;
-            SellProductUseCase.Execute(productToSell.ProductId, productToSell.Quantity.Value);
+            SellProductUseCase.Execute(CashierName, productToSell.ProductId, productToSell.Quantity.Value);
 
         }
 

@@ -105,13 +105,25 @@ using CoreBusiness;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 15 "C:\Users\Sefa\source\repos\Blazor-SupermarketManagement\WebApp\Pages\CashierConsoleComponent.razor"
+#line 24 "C:\Users\Sefa\source\repos\Blazor-SupermarketManagement\WebApp\Pages\CashierConsoleComponent.razor"
        
 
-    private void SelectProduct(Product product)
+    private Product selectedProduct;
+    private string cashierName;
+        protected override void OnInitialized()
         {
-
+            base.OnInitialized();
         }
+
+        private void SelectProduct(Product product)
+    {
+        selectedProduct = product;
+    }
+
+    private void SellProduct(Product product)
+    {
+
+    }
 
 
 #line default

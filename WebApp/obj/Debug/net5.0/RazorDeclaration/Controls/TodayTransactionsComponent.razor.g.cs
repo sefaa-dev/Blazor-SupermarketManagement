@@ -4,7 +4,7 @@
 #pragma warning disable 0649
 #pragma warning disable 0169
 
-namespace WebApp.Pages
+namespace WebApp.Controls
 {
     #line hidden
     using System;
@@ -96,39 +96,13 @@ using CoreBusiness;
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/cashier_console")]
-    public partial class CashierConsoleComponent : Microsoft.AspNetCore.Components.ComponentBase
+    public partial class TodayTransactionsComponent : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
         {
         }
         #pragma warning restore 1998
-#nullable restore
-#line 24 "C:\Users\Sefa\Source\Repos\Blazor-SupermarketManagement\WebApp\Pages\CashierConsoleComponent.razor"
-       
-
-    private Product selectedProduct;
-    private string cashierName;
-        protected override void OnInitialized()
-        {
-            base.OnInitialized();
-        }
-
-        private void SelectProduct(Product product)
-    {
-        selectedProduct = product;
-    }
-
-    private void SellProduct(Product product)
-    {
-
-    }
-
-
-#line default
-#line hidden
-#nullable disable
     }
 }
 #pragma warning restore 1591
