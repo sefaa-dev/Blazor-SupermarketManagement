@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using CoreBusiness;
 using UseCases.DataStorePluginInterfaces;
 
@@ -22,7 +20,6 @@ namespace Plugins.DataStore.InMemory
             if (string.IsNullOrWhiteSpace(cashierName))
                 return transactions;
             else
-
                 return transactions.Where(x => string.Equals(x.CashierName, cashierName, StringComparison.OrdinalIgnoreCase));
         }
 
@@ -41,7 +38,7 @@ namespace Plugins.DataStore.InMemory
         public void Save(string cashierName, int productId, string productName, double price, int beforeQty, int soldQty)
         {
             int transactionId = 0;
-            if (transactionId != null && transactions.Count > 0)
+            if (transactions != null && transactions.Count > 0)
             {
                 int maxId = transactions.Max(x => x.TransactionId);
                 transactionId = maxId + 1;
@@ -63,16 +60,5 @@ namespace Plugins.DataStore.InMemory
             });
         }
 
-        IEnumerable<System.Transactions.Transaction> ITransactionRepository.Get(string cashierName)
-        {
-            throw new NotImplementedException();
-        }
-
-    
-
-        IEnumerable<System.Transactions.Transaction> ITransactionRepository.GetByDay(string cashierName, DateTime date)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

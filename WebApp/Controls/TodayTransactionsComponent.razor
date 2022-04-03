@@ -1,7 +1,8 @@
 ﻿@inject UseCases.IGetTodayTransactionsUseCase GetTodayTransactionsUseCase
+
 @if (transactions != null)
 {
-<table class="table">
+    <table class="table">
     <thead>
         <tr>
             <th>Cashier Name</th>
@@ -16,11 +17,13 @@
         @foreach (var tran in transactions)
         {
         <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>@tran.CashierName</td>
+            <td>@tran.ProductName</td>
+            <td>@tran.TimeStamp.ToString("MM/dd")</td>
+            <td>@tran.BeforeQty</td>
+            <td>@tran.SoldQty</td>
+            <td>@(tran.BeforeQty - tran.SoldQty)</td>
+
         </tr>
         }
     </tbody>
@@ -29,12 +32,15 @@
 
 
 @code {
+
     private IEnumerable<Transaction> transactions;
 
-    public void LoadTransactions()
-        {
+    public void LoadTransactions(string cashierName)
+    {
+
         transactions = GetTodayTransactionsUseCase.Execute(cashierName);
+
         StateHasChanged();
-        }
+    }
 
 }
