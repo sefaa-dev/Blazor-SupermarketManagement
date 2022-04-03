@@ -1,0 +1,69 @@
+﻿@page "/transaction"
+
+<div class="row">
+    <div class="col-4">
+        <label for="cashier">Cashier Name</label>
+        <input type="text" id="cashier" class="form-control" @bind-value="cashierName" />
+    </div>
+
+    <div class="col-3">
+        <label for="startdate">Start Date</label>
+        <input type="date" id="startdate" class="form-control" @bind-value="startDate" />
+    </div>
+
+    <div class="col-3">
+        <label for="enddate">End Date</label>
+        <input type="date" id="enddate" class="form-control" @bind-value="dateTime" />
+    </div>
+    <div class="col-2">
+        <button type="button" class="btn btn-primary" @onclick="LoadTransactions">Search</button>
+    </div>
+
+</div>
+<br>
+
+@if (transactions != null)
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Cashier Name</th>
+                <th>Product Name</th>
+                <th>Date Time</th>
+                <th>Qty Before</th>
+                <th>Qty Sold</th>
+                <th>Qty After</th>
+                <th>Sold Amt</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var tran in transactions)
+            {
+                <tr>
+                    <td>@tran.CashierName</td>
+                    <td>@tran.ProductName</td>
+                    <td>@tran.TimeStamp.ToString("dd/MM/yyyy hh:mm")</td>
+                    <td>@tran.BeforeQty</td>
+                    <td>@tran.SoldQty</td>
+                    <td>@(tran.BeforeQty - tran.SoldQty)</td>
+                    <td>@(string.Format("{0:c}", tran.SoldQty * tran.Price))</td>
+
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+
+@code {
+
+    private string cashierName;
+    private DateTime startDate;
+    private DateTime dateTime;
+    private IEnumerable<Transaction> transactions;
+
+    private void LoadTransactions()
+        {
+
+        }
+}

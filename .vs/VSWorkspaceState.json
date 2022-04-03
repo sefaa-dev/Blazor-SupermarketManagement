@@ -3,11 +3,12 @@
     "",
     "\\Plugins.DataStore.InMemory",
     "\\UseCases",
+    "\\UseCases\\UseCaseInterfaces",
     "\\WebApp",
     "\\WebApp\\Controls",
     "\\WebApp\\Pages",
     "\\WebApp\\Shared"
   ],
-  "SelectedNode": "\\WebApp\\Controls\\TodayTransactionsComponent.razor",
+  "SelectedNode": "\\UseCases\\UseCaseInterfaces\\IGetTodayTransactionsUseCase.cs",
   "PreviewInSolutionExplorer": false
 }

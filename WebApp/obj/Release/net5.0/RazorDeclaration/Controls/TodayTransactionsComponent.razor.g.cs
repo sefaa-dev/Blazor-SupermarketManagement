@@ -103,6 +103,25 @@ using CoreBusiness;
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 36 "C:\Users\Sefa\source\repos\Blazor-SupermarketManagement\WebApp\Controls\TodayTransactionsComponent.razor"
+       
+
+    private IEnumerable<Transaction> transactions;
+
+    public void LoadTransactions(string cashierName)
+    {
+
+        transactions = GetTodayTransactionsUseCase.Execute(cashierName);
+
+        StateHasChanged();
+    }
+
+
+#line default
+#line hidden
+#nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private UseCases.IGetTodayTransactionsUseCase GetTodayTransactionsUseCase { get; set; }
     }
 }
 #pragma warning restore 1591
