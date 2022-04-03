@@ -11,6 +11,7 @@
             <th>Qty Before</th>
             <th>Qty Sold</th>
             <th>Qty After</th>
+            <th>Sold Amt</th>
         </tr>
     </thead>
     <tbody>
@@ -19,10 +20,11 @@
         <tr>
             <td>@tran.CashierName</td>
             <td>@tran.ProductName</td>
-            <td>@tran.TimeStamp.ToString("MM/dd")</td>
+            <td>@tran.TimeStamp.ToString("dd/MM/yyyy hh:mm")</td>
             <td>@tran.BeforeQty</td>
             <td>@tran.SoldQty</td>
             <td>@(tran.BeforeQty - tran.SoldQty)</td>
+            <td>@(string.Format("{0:c}", tran.SoldQty * tran.Price))</td>
 
         </tr>
         }

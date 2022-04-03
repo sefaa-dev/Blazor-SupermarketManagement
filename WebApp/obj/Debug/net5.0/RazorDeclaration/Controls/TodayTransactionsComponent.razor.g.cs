@@ -104,7 +104,7 @@ using CoreBusiness;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 34 "C:\Users\Sefa\Source\Repos\Blazor-SupermarketManagement\WebApp\Controls\TodayTransactionsComponent.razor"
+#line 36 "C:\Users\Sefa\Source\Repos\Blazor-SupermarketManagement\WebApp\Controls\TodayTransactionsComponent.razor"
        
 
     private IEnumerable<Transaction> transactions;
