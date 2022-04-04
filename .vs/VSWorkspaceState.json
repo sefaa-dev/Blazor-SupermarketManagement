@@ -9,6 +9,6 @@
     "\\WebApp\\Pages",
     "\\WebApp\\Shared"
   ],
-  "SelectedNode": "\\UseCases\\UseCaseInterfaces\\IGetTodayTransactionsUseCase.cs",
+  "SelectedNode": "\\WebApp\\Pages\\CashierConsoleComponent.razor",
   "PreviewInSolutionExplorer": false
 }
