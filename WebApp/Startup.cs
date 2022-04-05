@@ -2,10 +2,12 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Plugins.DataStore.InMemory;
+using Plugins.DataStore.SQL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -33,8 +35,17 @@ namespace WebApp
             services.AddServerSideBlazor();
             services.AddSingleton<WeatherForecastService>();
 
-            // Ben yazdým Dependency Injection for In-Memory Data Store
-            services.AddScoped<ICategoryRepository, CategoryInMemoryRepository>();
+            services.AddDbContext<MarketContext>(options=>
+            {
+                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
+
+
+            });
+
+        
+
+                // Ben yazdým Dependency Injection for In-Memory Data Store
+                services.AddScoped<ICategoryRepository, CategoryInMemoryRepository>();
             services.AddScoped<IProductRepository, ProductInMemoryRepository>();
             services.AddScoped<ITransactionRepository, TransactionInMemoryRepository>();
 

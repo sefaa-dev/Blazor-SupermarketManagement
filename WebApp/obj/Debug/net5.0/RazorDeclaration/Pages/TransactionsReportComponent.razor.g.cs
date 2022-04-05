@@ -105,7 +105,7 @@ using CoreBusiness;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 84 "C:\Users\Sefa\Source\Repos\Blazor-SupermarketManagement\WebApp\Pages\TransactionsReportComponent.razor"
+#line 85 "C:\Users\Sefa\Source\Repos\Blazor-SupermarketManagement\WebApp\Pages\TransactionsReportComponent.razor"
        
 
     private string cashierName;
