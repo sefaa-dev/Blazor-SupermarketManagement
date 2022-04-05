@@ -1348,7 +1348,8 @@
         "dependencies": {
           "CoreBusiness": "1.0.0",
           "Microsoft.EntityFrameworkCore": "5.0.12",
-          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.12"
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.12",
+          "UseCases": "1.0.0"
         },
         "runtime": {
           "Plugins.DataStore.SQL.dll": {}

@@ -142,6 +142,9 @@
             "projectReferences": {
               "C:\\Users\\Sefa\\Source\\Repos\\Blazor-SupermarketManagement\\CoreBusiness\\CoreBusiness.csproj": {
                 "projectPath": "C:\\Users\\Sefa\\Source\\Repos\\Blazor-SupermarketManagement\\CoreBusiness\\CoreBusiness.csproj"
+              },
+              "C:\\Users\\Sefa\\Source\\Repos\\Blazor-SupermarketManagement\\UseCases\\UseCases.csproj": {
+                "projectPath": "C:\\Users\\Sefa\\Source\\Repos\\Blazor-SupermarketManagement\\UseCases\\UseCases.csproj"
               }
             }
           }

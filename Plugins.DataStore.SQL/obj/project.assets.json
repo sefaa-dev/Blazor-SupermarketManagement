@@ -1529,6 +1529,19 @@
         "runtime": {
           "bin/placeholder/CoreBusiness.dll": {}
         }
+      },
+      "UseCases/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "CoreBusiness": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/UseCases.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/UseCases.dll": {}
+        }
       }
     }
   },
@@ -5802,6 +5815,11 @@
       "type": "project",
       "path": "../CoreBusiness/CoreBusiness.csproj",
       "msbuildProject": "../CoreBusiness/CoreBusiness.csproj"
+    },
+    "UseCases/1.0.0": {
+      "type": "project",
+      "path": "../UseCases/UseCases.csproj",
+      "msbuildProject": "../UseCases/UseCases.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -5810,7 +5828,8 @@
       "Microsoft.EntityFrameworkCore >= 5.0.12",
       "Microsoft.EntityFrameworkCore.Design >= 5.0.12",
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.12",
-      "Microsoft.EntityFrameworkCore.Tools >= 5.0.12"
+      "Microsoft.EntityFrameworkCore.Tools >= 5.0.12",
+      "UseCases >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -5842,6 +5861,9 @@
           "projectReferences": {
             "C:\\Users\\Sefa\\Source\\Repos\\Blazor-SupermarketManagement\\CoreBusiness\\CoreBusiness.csproj": {
               "projectPath": "C:\\Users\\Sefa\\Source\\Repos\\Blazor-SupermarketManagement\\CoreBusiness\\CoreBusiness.csproj"
+            },
+            "C:\\Users\\Sefa\\Source\\Repos\\Blazor-SupermarketManagement\\UseCases\\UseCases.csproj": {
+              "projectPath": "C:\\Users\\Sefa\\Source\\Repos\\Blazor-SupermarketManagement\\UseCases\\UseCases.csproj"
             }
           }
         }

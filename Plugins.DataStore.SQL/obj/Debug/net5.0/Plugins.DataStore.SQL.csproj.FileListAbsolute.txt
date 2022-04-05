@@ -16,3 +16,5 @@ C:\Users\Sefa\Source\Repos\Blazor-SupermarketManagement\Plugins.DataStore.SQL\ob
 C:\Users\Sefa\Source\Repos\Blazor-SupermarketManagement\Plugins.DataStore.SQL\obj\Debug\net5.0\ref\Plugins.DataStore.SQL.dll
 C:\Users\Sefa\Source\Repos\Blazor-SupermarketManagement\Plugins.DataStore.SQL\obj\Debug\net5.0\Plugins.DataStore.SQL.pdb
 C:\Users\Sefa\Source\Repos\Blazor-SupermarketManagement\Plugins.DataStore.SQL\obj\Debug\net5.0\Plugins.DataStore.SQL.genruntimeconfig.cache
+C:\Users\Sefa\Source\Repos\Blazor-SupermarketManagement\Plugins.DataStore.SQL\bin\Debug\net5.0\UseCases.dll
+C:\Users\Sefa\Source\Repos\Blazor-SupermarketManagement\Plugins.DataStore.SQL\bin\Debug\net5.0\UseCases.pdb

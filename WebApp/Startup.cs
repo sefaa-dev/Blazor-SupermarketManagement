@@ -38,16 +38,19 @@ namespace WebApp
             services.AddDbContext<MarketContext>(options=>
             {
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
-
-
             });
 
         
 
                 // Ben yazdým Dependency Injection for In-Memory Data Store
-                services.AddScoped<ICategoryRepository, CategoryInMemoryRepository>();
-            services.AddScoped<IProductRepository, ProductInMemoryRepository>();
-            services.AddScoped<ITransactionRepository, TransactionInMemoryRepository>();
+            //services.AddScoped<ICategoryRepository, CategoryInMemoryRepository>();
+            //services.AddScoped<IProductRepository, ProductInMemoryRepository>();
+            //services.AddScoped<ITransactionRepository, TransactionInMemoryRepository>();
+
+            //Dependency Injection for EF core Data Store for SQL
+            services.AddScoped<ICategoryRepository, CategoryRepository>();
+            services.AddScoped<IProductRepository, ProductRepository>();
+            services.AddScoped<ITransactionRepository, TransactionRepository>();
 
             //Dependency Injection for use cases and repositories
             services.AddTransient<IViewCategoriesUseCase, ViewCategoriesUseCase>();

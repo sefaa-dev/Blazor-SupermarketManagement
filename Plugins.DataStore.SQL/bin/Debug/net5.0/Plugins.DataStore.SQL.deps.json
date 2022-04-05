@@ -12,7 +12,8 @@
           "Microsoft.EntityFrameworkCore": "5.0.12",
           "Microsoft.EntityFrameworkCore.Design": "5.0.12",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.12",
-          "Microsoft.EntityFrameworkCore.Tools": "5.0.12"
+          "Microsoft.EntityFrameworkCore.Tools": "5.0.12",
+          "UseCases": "1.0.0"
         },
         "runtime": {
           "Plugins.DataStore.SQL.dll": {}
@@ -1073,6 +1074,14 @@
         "runtime": {
           "CoreBusiness.dll": {}
         }
+      },
+      "UseCases/1.0.0": {
+        "dependencies": {
+          "CoreBusiness": "1.0.0"
+        },
+        "runtime": {
+          "UseCases.dll": {}
+        }
       }
     }
   },
@@ -1762,6 +1771,11 @@
       "hashPath": "system.xml.xmlserializer.4.3.0.nupkg.sha512"
     },
     "CoreBusiness/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UseCases/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
