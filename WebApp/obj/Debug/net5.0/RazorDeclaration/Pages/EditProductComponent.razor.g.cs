@@ -96,6 +96,13 @@ using CoreBusiness;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 2 "C:\Users\Sefa\Source\Repos\Blazor-SupermarketManagement\WebApp\Pages\EditProductComponent.razor"
+           [Authorize(Policy = "AdminOnly")]
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/editproduct/{productId}")]
     public partial class EditProductComponent : Microsoft.AspNetCore.Components.ComponentBase
     {
@@ -105,7 +112,7 @@ using CoreBusiness;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 57 "C:\Users\Sefa\Source\Repos\Blazor-SupermarketManagement\WebApp\Pages\EditProductComponent.razor"
+#line 59 "C:\Users\Sefa\Source\Repos\Blazor-SupermarketManagement\WebApp\Pages\EditProductComponent.razor"
        
 
     [Parameter]

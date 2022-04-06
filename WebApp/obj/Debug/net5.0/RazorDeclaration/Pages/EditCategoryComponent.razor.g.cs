@@ -96,6 +96,13 @@ using CoreBusiness;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 2 "C:\Users\Sefa\Source\Repos\Blazor-SupermarketManagement\WebApp\Pages\EditCategoryComponent.razor"
+           [Authorize(Policy = "AdminOnly")]
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/editcategory/{categoryId}")]
     public partial class EditCategoryComponent : Microsoft.AspNetCore.Components.ComponentBase
     {
@@ -105,7 +112,7 @@ using CoreBusiness;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 38 "C:\Users\Sefa\Source\Repos\Blazor-SupermarketManagement\WebApp\Pages\EditCategoryComponent.razor"
+#line 40 "C:\Users\Sefa\Source\Repos\Blazor-SupermarketManagement\WebApp\Pages\EditCategoryComponent.razor"
        
 
     [Parameter]
@@ -127,10 +134,10 @@ using CoreBusiness;
             var cat = GetCategoryByIdUseCase.Execute(iCategoryId);
             this.category = new Category { CategoryId = cat.CategoryId, Name = cat.Name, Description = cat.Description };
 
-            
-            
+
+
         }
-        
+
     }
 
 

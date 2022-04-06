@@ -96,6 +96,13 @@ using CoreBusiness;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 2 "C:\Users\Sefa\Source\Repos\Blazor-SupermarketManagement\WebApp\Pages\ProductsComponent.razor"
+           [Authorize(Policy = "AdminOnly")]
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/products")]
     public partial class ProductsComponent : Microsoft.AspNetCore.Components.ComponentBase
     {
@@ -105,7 +112,7 @@ using CoreBusiness;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 46 "C:\Users\Sefa\Source\Repos\Blazor-SupermarketManagement\WebApp\Pages\ProductsComponent.razor"
+#line 49 "C:\Users\Sefa\Source\Repos\Blazor-SupermarketManagement\WebApp\Pages\ProductsComponent.razor"
        
 
     private IEnumerable<Product> products;

@@ -96,6 +96,13 @@ using CoreBusiness;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 2 "C:\Users\Sefa\Source\Repos\Blazor-SupermarketManagement\WebApp\Pages\TransactionsReportComponent.razor"
+           [Authorize(Policy = "AdminOnly")]
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/transactions")]
     public partial class TransactionsReportComponent : Microsoft.AspNetCore.Components.ComponentBase
     {
@@ -105,7 +112,7 @@ using CoreBusiness;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 85 "C:\Users\Sefa\Source\Repos\Blazor-SupermarketManagement\WebApp\Pages\TransactionsReportComponent.razor"
+#line 87 "C:\Users\Sefa\Source\Repos\Blazor-SupermarketManagement\WebApp\Pages\TransactionsReportComponent.razor"
        
 
     private string cashierName;

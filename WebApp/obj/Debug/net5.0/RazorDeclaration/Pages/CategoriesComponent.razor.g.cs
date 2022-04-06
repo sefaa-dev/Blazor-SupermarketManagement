@@ -96,6 +96,13 @@ using CoreBusiness;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 2 "C:\Users\Sefa\Source\Repos\Blazor-SupermarketManagement\WebApp\Pages\CategoriesComponent.razor"
+           [Authorize(Policy = "AdminOnly")]
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/categories")]
     public partial class CategoriesComponent : Microsoft.AspNetCore.Components.ComponentBase
     {
@@ -105,7 +112,7 @@ using CoreBusiness;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 45 "C:\Users\Sefa\Source\Repos\Blazor-SupermarketManagement\WebApp\Pages\CategoriesComponent.razor"
+#line 47 "C:\Users\Sefa\Source\Repos\Blazor-SupermarketManagement\WebApp\Pages\CategoriesComponent.razor"
        
 
     private List<Category> categories;

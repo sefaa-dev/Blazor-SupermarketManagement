@@ -1,9 +1,11 @@
 ﻿@page "/editcategory/{categoryId}"
+@attribute [Authorize(Policy = "AdminOnly")]
+
 
 @inject NavigationManager NavigationManager
 @inject UseCases.IAddCategoryUseCase AddCategoryUseCase
-@inject UseCases.IGetCategoryByIdUseCase GetCategoryByIdUseCase              
-@inject UseCases.IEditCategoryUseCase EditCategoryUseCase    
+@inject UseCases.IGetCategoryByIdUseCase GetCategoryByIdUseCase
+@inject UseCases.IEditCategoryUseCase EditCategoryUseCase
 
 
 <h3>Edit Category</h3>
@@ -17,7 +19,7 @@
 
         <div class="form-group">
             <label for="name">Name</label>
-            <InputText id="name" @bind-Value="category.Name" class="form-control"></InputText> 
+            <InputText id="name" @bind-Value="category.Name" class="form-control"></InputText>
         </div>
 
         <div class="form-group">
@@ -56,10 +58,10 @@
             var cat = GetCategoryByIdUseCase.Execute(iCategoryId);
             this.category = new Category { CategoryId = cat.CategoryId, Name = cat.Name, Description = cat.Description };
 
-            
-            
+
+
         }
-        
+
     }
 
 

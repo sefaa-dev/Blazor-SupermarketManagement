@@ -96,6 +96,13 @@ using CoreBusiness;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 2 "C:\Users\Sefa\Source\Repos\Blazor-SupermarketManagement\WebApp\Pages\AddCategoryComponent.razor"
+           [Authorize(Policy ="AdminOnly")]
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/addcategory")]
     public partial class AddCategoryComponent : Microsoft.AspNetCore.Components.ComponentBase
     {
@@ -105,7 +112,7 @@ using CoreBusiness;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 34 "C:\Users\Sefa\Source\Repos\Blazor-SupermarketManagement\WebApp\Pages\AddCategoryComponent.razor"
+#line 35 "C:\Users\Sefa\Source\Repos\Blazor-SupermarketManagement\WebApp\Pages\AddCategoryComponent.razor"
        
 
     private Category category;

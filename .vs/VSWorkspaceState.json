@@ -9,6 +9,6 @@
     "\\WebApp\\Pages",
     "\\WebApp\\Shared"
   ],
-  "SelectedNode": "\\WebApp\\Startup.cs",
+  "SelectedNode": "\\WebApp\\Pages\\AddCategoryComponent.razor",
   "PreviewInSolutionExplorer": false
 }

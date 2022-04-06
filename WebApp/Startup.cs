@@ -40,6 +40,12 @@ namespace WebApp
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
             });
 
+            services.AddAuthorization(options =>
+            {
+                options.AddPolicy("AdminOnly", p => p.RequireClaim("Position", "Admin"));
+                options.AddPolicy("CashierOnly", p => p.RequireClaim("Position", "Cashier"));
+            });
+
         
 
                 // Ben yazdým Dependency Injection for In-Memory Data Store
@@ -89,8 +95,12 @@ namespace WebApp
 
             app.UseRouting();
 
+            app.UseAuthentication();
+            app.UseAuthorization();
+
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapRazorPages();
                 endpoints.MapBlazorHub();
                 endpoints.MapFallbackToPage("/_Host");
             });

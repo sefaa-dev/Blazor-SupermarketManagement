@@ -1,4 +1,6 @@
 ﻿@page "/products"
+@attribute [Authorize(Policy = "AdminOnly")]
+
 
 @inject NavigationManager NavigationManager
 @inject UseCases.IViewProductsUseCase ViewProductsUseCase
@@ -25,16 +27,17 @@
             {
                 <tr>
                     <td>@GetCategoryByIdUseCase.Execute(product.CategoryId.Value)?.Name</td>
-                    <td>@product.Name</td> 
-                    <td>@(Math.Round(product.Price.Value, 2))</td> 
+                    <td>@product.Name</td>
+                    <td>@(Math.Round(product.Price.Value, 2))</td>
                     <td>@product.Quantity</td>
                     <td>
                         <button type="button" class="btn btn-link" @onclick="@(()=>OnEditProduct  (product))">Edit</button>
                         &nbsp;
                         <button type="button" class="btn btn-link" @onclick="@(()=>OnDeleteProduct (product.ProductId))">Delete</button>
 
-                    </td>     
-                </tr>  
+                    </td>
+                </tr>
+
             }
         </tbody>
     </table>

@@ -1,4 +1,6 @@
 ﻿@page "/categories"
+@attribute [Authorize(Policy = "AdminOnly")]
+
 
 @inject NavigationManager NavigationManager
 @inject UseCases.IViewCategoriesUseCase ViewCategoryUseCase
@@ -10,18 +12,18 @@
 
 @if (categories != null)
 {
-    
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Description</th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var category in categories)
-                {
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var category in categories)
+            {
                 <tr>
                     <td>@category.Name</td>
                     <td>@category.Description</td>
@@ -31,11 +33,11 @@
 
                     </td>
                 </tr>
-                }
-                
-                </tbody>
-        </table>
-    
+            }
+
+        </tbody>
+    </table>
+
 }
 
 <br />
