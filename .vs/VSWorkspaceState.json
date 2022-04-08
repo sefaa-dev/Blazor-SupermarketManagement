@@ -2,13 +2,11 @@
   "ExpandedNodes": [
     "",
     "\\Plugins.DataStore.InMemory",
-    "\\UseCases",
     "\\UseCases\\UseCaseInterfaces",
     "\\WebApp",
     "\\WebApp\\Controls",
-    "\\WebApp\\Pages",
     "\\WebApp\\Shared"
   ],
-  "SelectedNode": "\\WebApp\\Pages\\AddCategoryComponent.razor",
+  "SelectedNode": "\\SupermarketManagement.sln",
   "PreviewInSolutionExplorer": false
 }
